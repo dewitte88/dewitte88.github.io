@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>\(✧ω✧)/</title>
+    <title></title>
+    <noscript>
+      <title>\(✧ω✧)/</title>
+    </noscript>
   </head>
   <body>
     <div class="content">
@@ -280,4 +282,20 @@
     }
   }
 </style>
+
+  <script>
+    function animateTitle(Title = "\(✧ω✧)/", delay = 300) {
+    let counter = 0;
+    let direction = true;
+    aniTitle = setInterval(function () {
+        if (counter == Title.length)
+            direction = false;
+        if (counter == false)
+            direction = true;
+        counter = (direction == true) ? ++counter : --counter;
+        newtitle = (counter == 0) ? "" : Title.slice(0, counter);
+        document.title = newtitle;
+    }, delay)
+}
+  </script>
 </html>
